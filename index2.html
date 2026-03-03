@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Message Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click the Button</h1>
+  <button onclick="generateMessage()">Generate Message</button>
+  <div id="message"></div>
+
+  <script>
+    const messages = [
+      "You will have a great day.",
+      "Drink some water.",
+      "Stop procrastinating.",
+      "You’re doing better than you think.",
+      "Go outside for 5 minutes."
+    ];
+
+    function generateMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
